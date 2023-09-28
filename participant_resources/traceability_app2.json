@@ -1,0 +1,224 @@
+{
+    "nodes": [
+        {
+            "discovery_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/discovery/src/main/java/pl/piomin/services/discovery/DiscoveryServer.java#L8",
+                "span": "(1:20)",
+                "sub_items": {
+                    "Port": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/discovery/src/main/resources/application.yml#L2",
+                        "span": "(11:20)"
+                    }
+                }
+            }
+        },
+        {
+            "gateway_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/GatewayServer.java#L15",
+                "span": "(1:17)",
+                "sub_items": {
+                    "Port": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/resources/application.yml#L2",
+                        "span": "(11:20)"
+                    },
+                    "load_balancer": {
+                        "artefact": "implicit with Zuul"
+                    },
+                    "plaintext_credentials": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/SecurityConfig.java#L36",
+                        "span": "(33:70)"
+                    },
+                    "in_memory_authentication": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/SecurityConfig.java#L36",
+                        "span": "(8:32)"
+                    }
+                }
+            }
+        },
+        {
+            "database_gateway_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/GatewayServer.java#L27",
+                "span": "(42:75)",
+                "sub_items": {
+                  "plaintext_credentials": {
+                      "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/GatewayServer.java#L28",
+                      "span": "(6:45)"
+                  }
+                }
+            }
+        },
+        {
+            "user": {
+                "artefact": "added implicitly"
+            }
+        },
+        {
+            "auth_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/OAuth2Config.java#L18",
+                "span": "(1:27)",
+                "sub_items": {
+                    "Port": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/resources/application.yml#L2",
+                        "span": "(11:20)"
+                    },
+                    "local_logging": {
+                        "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/security/UserDetailsServiceImpl.java#L33",
+                        "span": "(9:18)"
+                    },
+                    "token_server": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/OAuth2Config.java#L48",
+                        "span": "(24:36)"
+                    },
+                    "resource_server": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/OAuth2ResourceServerConfig.java#L11",
+                        "span": "(1:22)"
+                    },
+                    "encryption": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/SecurityConfig.java#L32",
+                        "span": "(11:26)"
+                    }
+                }
+            }
+        },
+        {
+            "database_auth_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/resources/application.yml#L8",
+                "span": "(10:43)",
+                "sub_items": {
+                    "plaintext_credentials": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/resources/application.yml#L10",
+                        "span": "(5:21)"
+                    },
+                    "tokenstore": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/OAuth2Config.java#L48",
+                        "span": "(24:36)"
+                    }
+                }
+            }
+        },
+        {
+            "account_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/java/pl/piomin/services/account/AccountService.java#L7",
+                "span": "(1:23)",
+                "sub_items": {
+                    "Port": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/resources/application.yml#L2",
+                        "span": "(11:20)"
+                    },
+                    "resource_server": {
+                      "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/java/pl/piomin/services/account/OAuth2ResourceServerConfig.java#L11",
+                      "span": "(1:22)"
+                    },
+                    "pre_authorized_endpoints": {
+                      "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/java/pl/piomin/services/account/api/AccountController.java#L17",
+                      "span": "(2:15)"
+                    }
+                }
+            }
+        },
+        {
+            "customer_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/CustomerApplication.java#L8",
+                "span": "(1:23)",
+                "sub_items": {
+                    "Port": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/resources/application.yml#L2",
+                        "span": "(11:20)"
+                    },
+                    "resource_server": {
+                      "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/OAuth2ResourceServerConfig.java#L11",
+                      "span": "(1:22)"
+                    },
+                    "pre_authorized_endpoints": {
+                      "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/api/CustomerController.java#L23",
+                      "span": "(2:15)"
+                    }
+                }
+            }
+        }
+    ],
+    "edges": [
+        {
+            "discovery_server -> gateway_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/GatewayServer.java#L17",
+                "span": "(1:23)"
+            }
+        },
+        {
+            "database_gateway_server -> gateway_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/java/pl/piomin/services/gateway/GatewayServer.java#L27",
+                "span": "(42:75)"
+            }
+        },
+        {
+            "user -> gateway_server": {
+                "artefact": "added implicitly"
+            }
+        },
+        {
+            "gateway_server -> user": {
+                "artefact": "added implicitly"
+            }
+        },
+        {
+            "auth_server -> discovery_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/java/pl/piomin/services/auth/AuthServer.java#L13",
+                "span": "(1:23)"
+            }
+        },
+        {
+            "database_auth_server -> auth_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/auth/src/main/resources/application.yml#L8",
+                "span": "(10:43)"
+            }
+        },
+        {
+            "gateway_server -> auth_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/resources/application.yml#L39",
+                "span": "(7:60)"
+            }
+        },
+        {
+            "account_service -> discovery_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/java/pl/piomin/services/account/AccountService.java#L8",
+                "span": "(1:23)"
+            }
+        },
+        {
+            "auth_server -> account_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/account/src/main/resources/application.yml#L20",
+                "span": "(7:58)"
+            }
+        },
+        {
+            "gateway_server -> account_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/gateway/src/main/resources/application.yml#L25",
+                "span": "(7:33)"
+            }
+        },
+        {
+            "customer_service -> discovery_server": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/CustomerApplication.java#L9",
+                "span": "(1:23)"
+            }
+        },
+        {
+            "customer_service -> account_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/client/AccountClient.java#L10",
+                "span": "(1:38)",
+                "sub_items": {
+                    "authenticated_request": {
+                        "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/java/pl/piomin/services/customer/client/AccountClientConfiguration.java#L27",
+                        "span": "(21:52)"
+                    }
+                }
+            }
+        },
+        {
+            "auth_server -> customer_service": {
+                "artefact": "https://github.com/piomin/sample-spring-oauth2-microservices/tree/with_database/customer/src/main/resources/application.yml#L16",
+                "span": "(7:58)"
+            }
+        }
+    ]
+}
