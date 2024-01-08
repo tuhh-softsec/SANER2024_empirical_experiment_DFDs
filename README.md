@@ -7,7 +7,7 @@ If you use the presented results in a scientific context, please cite as:
 
 ```bibtex
 @inproceedings{Schneider24_DFDs_empirical_experiment,
-    author      = {Simon Schneider, Nicolas E. Diaz Ferreyra, Pierre-Jean Queval, Georg Simhandl, Uwe Zdun, Riccardo Scandariato},
+    author      = {Schneider, Simon and Diaz Ferreyra, Nicolas E. and Queval,  Pierre-Jean and Simhandl, Georg and Zdun, Uwe and Scandariato, Riccardo},
     title       = {How Dataflow Diagrams Impact Software Security Analysis: an Empirical Experiment},
     booktitle   = {2024 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)}, 
     year        = {2024},
